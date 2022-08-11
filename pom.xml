@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.1</version>
+        <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kingmeter</groupId>
@@ -51,7 +51,7 @@
         </dependency>
         <dependency>
             <groupId>com.kingmeter</groupId>
-            <artifactId>kingmeter-dto</artifactId>
+            <artifactId>kingmeter-common</artifactId>
             <version>${kingmeter.version}</version>
         </dependency>
         <dependency>
@@ -84,12 +84,12 @@
         <repository>
             <id>kingmeter-nexus</id>
             <name>release</name>
-            <url>http://47.92.38.164:5007/repository/maven-public/</url>
+            <url>http://39.100.88.118:5007/repository/maven-public/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>snapshots</name>
-            <url>http://47.92.38.164:5007/repository/maven-snapshots/</url>
+            <url>http://39.100.88.118:5007/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

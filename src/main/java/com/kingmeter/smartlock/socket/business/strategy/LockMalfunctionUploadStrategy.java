@@ -1,6 +1,6 @@
 package com.kingmeter.smartlock.socket.business.strategy;
 
-import com.kingmeter.dto.KingMeterMarker;
+import com.kingmeter.common.KingMeterMarker;
 import com.kingmeter.dto.smartlock.socket.in.LockMalfunctionUploadRequestDto;
 import com.kingmeter.dto.smartlock.socket.out.LockMalfunctionUploadResponseDto;
 import com.kingmeter.smartlock.socket.acl.SmartLockService;

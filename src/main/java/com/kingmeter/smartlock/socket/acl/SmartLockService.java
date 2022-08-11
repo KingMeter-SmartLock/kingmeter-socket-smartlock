@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.kingmeter.dto.smartlock.socket.in.*;
 import com.kingmeter.dto.smartlock.socket.out.LockLoginResponseDto;
 import com.kingmeter.socket.framework.util.CacheUtil;
-import com.kingmeter.utils.MD5Util;
 import com.kingmeter.utils.TokenResult;
 import com.kingmeter.utils.TokenUtils;
 import io.netty.channel.socket.SocketChannel;
@@ -43,7 +42,9 @@ public class SmartLockService {
 
         long lockId = requestDto.getLockId();
 
-        TokenResult tokenResult = TokenUtils.getInstance().getRandomLockToken();
+        TokenResult tokenResult = TokenUtils.getInstance().getRandomLockToken(
+                CacheUtil.getInstance().getTokenAndDeviceIdMap()
+        );
 
         LockLoginResponseDto responseDto =
                 new LockLoginResponseDto();

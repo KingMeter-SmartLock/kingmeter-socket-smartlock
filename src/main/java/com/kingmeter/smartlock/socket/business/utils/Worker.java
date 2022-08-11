@@ -1,5 +1,6 @@
 package com.kingmeter.smartlock.socket.business.utils;
 
+import com.kingmeter.common.SpringContexts;
 import com.kingmeter.smartlock.socket.acl.SmartLockService;
 import com.kingmeter.smartlock.socket.business.code.ClientFunctionCodeType;
 import com.kingmeter.socket.framework.business.WorkerTemplate;
@@ -17,10 +18,13 @@ public class Worker extends WorkerTemplate {
     @Autowired
     private SmartLockService smartLockService;
 
+    @Autowired
+    private SpringContexts springContexts;
+
 
     @Override
     public RequestStrategy getRequestStrategy(int functionCode) {
-        return (RequestStrategy)getBean(ClientFunctionCodeType.getEnum(functionCode).getClassName());
+        return (RequestStrategy)springContexts.getBean(ClientFunctionCodeType.getEnum(functionCode).getClassName());
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.kingmeter.smartlock.socket.business.strategy;
 
-import com.kingmeter.dto.KingMeterMarker;
+import com.kingmeter.common.KingMeterMarker;
 import com.kingmeter.dto.smartlock.socket.in.SetCertForLockRequestDto;
 import com.kingmeter.smartlock.socket.acl.SmartLockService;
 import com.kingmeter.socket.framework.dto.RequestBody;
