@@ -17,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
@@ -31,7 +32,7 @@ public class SmartLockSocketApplication {
         UnLockSendResponseDto responseDto = new UnLockSendResponseDto(userId,card);
 
         String key = "UnLock_" + lockId+"_"+userId;
-        CacheUtil.getInstance().getDeviceResultMap().remove(key);
+//        CacheUtil.getInstance().getDeviceResultMap().put(key,result);
 
         socketApplication.sendSocketMsg(lockId,
                 ServerFunctionCodeType.UnLockSend,

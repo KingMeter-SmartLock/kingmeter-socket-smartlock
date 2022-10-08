@@ -95,8 +95,8 @@ public class SmartLockTestApplication {
             UnLockSendRequestDto response =
                     smartLockSocketApplication.unLockSend(lockId, "123", "");
 
-            log.info(new KingMeterMarker("Socket,UnLockSend,C002"),
-                    "{}|{}|{}", lockId, 0, "");
+//            log.info(new KingMeterMarker("Socket,UnLockSend,C002"),
+//                    "{}|{}|{}", lockId, 0, "");
 
             if (response.getStu().equals("3")) {
                 return false;

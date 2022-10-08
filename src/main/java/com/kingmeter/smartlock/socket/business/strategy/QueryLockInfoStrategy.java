@@ -29,10 +29,10 @@ public class QueryLockInfoStrategy implements RequestStrategy {
 
         smartLockService.dealWithQueryLockInfo(requestDto);
 
-        String tmp = "Lock Info Data is Start-->";
-        tmp += requestBody.getData();
-        tmp += "<--END";
-        log.info(tmp);
+//        String tmp = "Lock Info Data is Start-->";
+//        tmp += requestBody.getData();
+//        tmp += "<--END";
+//        log.info(tmp);
 
         log.info(new KingMeterMarker("Socket,QueryLockInfo,A006"),
                 "{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}",

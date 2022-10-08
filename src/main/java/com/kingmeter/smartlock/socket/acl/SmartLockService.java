@@ -120,15 +120,14 @@ public class SmartLockService {
                 "SetCert_" + requestDto.getLockId(), result);
     }
 
-    public void dealWithUnLock(long lockId,UnLockSendRequestDto requestDto) {
+    public void dealWithUnLock(long lockId, UnLockSendRequestDto requestDto) {
         Map<String, String> result = new HashMap<>();
         result.put("UnLock",
                 JSON.toJSONString(requestDto));
 
-        String key = "UnLock_" + lockId+"_"+requestDto.getUid();
+        String key = "UnLock_" + lockId + "_" + requestDto.getUid();
 
-        CacheUtil.getInstance().getDeviceResultMap().put(
-                key, result);
+        CacheUtil.getInstance().getDeviceResultMap().put(key,result);
     }
 
     public void offlineNotify(long l) {
