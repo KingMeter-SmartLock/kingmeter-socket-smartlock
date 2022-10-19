@@ -35,7 +35,6 @@ public class UnLockSendStrategy implements RequestStrategy {
 
 //        CacheUtil.setScanUnlock_result_map(lockId+"_"+requestDto.getUid(),
 //                Integer.parseInt(requestDto.getStu()));
-
 //        //这里先不对锁状态进行判断
 //        redis.set("lock_"+requestBody.getDeviceId()+"_scan",requestDto.getStu(),flagInRedisTime);//表示成功开锁
 //        //这个不向智能锁发送socket信息
